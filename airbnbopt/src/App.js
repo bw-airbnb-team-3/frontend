@@ -19,7 +19,7 @@ function App() {
     </Router>*/
     <div className="App">
       <Header/>
-      <Dashboard/>
+      <Signup/>
     </div>
   );
 }
