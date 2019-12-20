@@ -42,12 +42,22 @@ export default Dashboard => {
         <h4>Popular Homes this Week</h4>
       </ContentFeed>
       <Filter>
-        <h3>Filter Results</h3>
-        <ul>
-          <li>Rooms</li> //dropdown here
-          <li>Bathrooms</li> //dropdown here
-          <li>Pool</li> //checkbox
-        </ul>
+        <form>
+          <h3>Filter Results</h3>
+          <ul>
+            <li>Rooms</li> {/*dropdown here*/}
+            <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            <li>Bathrooms</li> {/*dropdown here*/}
+            <li>Pool</li> {/*checkbox*/}
+          </ul>
+        </form>
       </Filter>
     </Content>
   );
