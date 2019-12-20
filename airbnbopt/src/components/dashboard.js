@@ -59,7 +59,8 @@ export default Dashboard => {
       <Filter>
         <form>
           <h3>Filter Results</h3>
-          <label>Pool</label> {/*dropdown here*/}
+          <h4>Rooms and Beds</h4>
+          <label>Rooms</label> {/*dropdown here*/}
           <select>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -67,6 +68,20 @@ export default Dashboard => {
             <option value="4">4</option>
             <option value="5">5</option>
             <option value="6">6</option>
+          </select>
+          <br />
+          <label>Beds</label>
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
           </select>
           <br />
           <label>Bathrooms</label> {/*dropdown here*/}
@@ -77,6 +92,7 @@ export default Dashboard => {
             <option value="4">4</option>
           </select>
           <br />
+          <h4>Facilities</h4>
           <label>Pool</label> {/*checkbox*/}
           <input type="checkbox" id="pool"></input>
           <br />
