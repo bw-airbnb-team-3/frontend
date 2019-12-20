@@ -40,12 +40,29 @@ export default Dashboard => {
         <h2>Content here</h2>
         <h3>Hello, *users name here*</h3>
         <h4>Popular Homes this Week</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
+        <h4>Feed here</h4>
       </ContentFeed>
       <Filter>
         <form>
           <h3>Filter Results</h3>
           <ul>
-            <li>Rooms</li> {/*dropdown here*/}
+            <label>Pool</label> {/*dropdown here*/}
             <select>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -54,8 +71,18 @@ export default Dashboard => {
               <option value="5">5</option>
               <option value="6">6</option>
             </select>
-            <li>Bathrooms</li> {/*dropdown here*/}
-            <li>Pool</li> {/*checkbox*/}
+            <br />
+            <label>Bathrooms</label> {/*dropdown here*/}
+            <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <br />
+            <label>Pool</label> {/*checkbox*/}
+            <input type="checkbox" id="pool"></input>
+            <br />
           </ul>
         </form>
       </Filter>
