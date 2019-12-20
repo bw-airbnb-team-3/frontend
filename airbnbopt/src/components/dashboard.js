@@ -10,12 +10,10 @@ const Content = styled.div`
 `;
 
 const Filter = styled.div`
-  border: solid 2px;
   align-text: center;
   width: 250px;
 `;
 const ContentFeed = styled.div`
-  border: solid 2px;
   align-text: center;
   width: 550px;
 `;
@@ -61,29 +59,27 @@ export default Dashboard => {
       <Filter>
         <form>
           <h3>Filter Results</h3>
-          <ul>
-            <label>Pool</label> {/*dropdown here*/}
-            <select>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-            </select>
-            <br />
-            <label>Bathrooms</label> {/*dropdown here*/}
-            <select>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-            <br />
-            <label>Pool</label> {/*checkbox*/}
-            <input type="checkbox" id="pool"></input>
-            <br />
-          </ul>
+          <label>Pool</label> {/*dropdown here*/}
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <br />
+          <label>Bathrooms</label> {/*dropdown here*/}
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <br />
+          <label>Pool</label> {/*checkbox*/}
+          <input type="checkbox" id="pool"></input>
+          <br />
         </form>
       </Filter>
     </Content>
