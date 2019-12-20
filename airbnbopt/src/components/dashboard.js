@@ -9,6 +9,17 @@ const Content = styled.div`
   flex-direction: row-reverse;
 `;
 
+const Filter = styled.div`
+  border: solid 2px;
+  align-text: center;
+  width: 250px;
+`;
+const ContentFeed = styled.div`
+  border: solid 2px;
+  align-text: center;
+  width: 550px;
+`;
+
 export default Dashboard => {
   const [,] = useState([]);
 
@@ -25,21 +36,19 @@ export default Dashboard => {
 
   return (
     <Content className="content">
-      <div>
-        <div>
-          <h2>Content here</h2>
-          <h3>Hello, *users name here*</h3>
-          <h4>Popular Homes this Week</h4>
-        </div>
-      </div>
-      <div>
+      <ContentFeed>
+        <h2>Content here</h2>
+        <h3>Hello, *users name here*</h3>
+        <h4>Popular Homes this Week</h4>
+      </ContentFeed>
+      <Filter>
         <h3>Filter Results</h3>
         <ul>
           <li>Rooms</li> //dropdown here
           <li>Bathrooms</li> //dropdown here
           <li>Pool</li> //checkbox
         </ul>
-      </div>
+      </Filter>
     </Content>
   );
 };
