@@ -9,9 +9,10 @@ import image5 from "../images/Airbnb5.jpg";
 const Container = styled.div`
   height: 200px;
   width: 550px;
-  border: solid 1px;
+  border-bottom: teal dashed 2px;
   display: flex;
   justify-content: center;
+  padding-top: 10px;
 `;
 
 const ImageCont = styled.div`
@@ -105,7 +106,17 @@ const DashboardCard = props => {
             <img src={image4} className="feedImage" />
           </Image>
         </ImageCont>
-        <Info>house info</Info>
+        <Info>
+          <h5>Stylish Hollywood Loft with Views</h5>
+          3 Guests
+          <br />
+          1 Bedroom
+          <br />
+          1 bed
+          <br />
+          1 bath
+          <br />
+        </Info>
       </Container>
       <Container>
         <ImageCont>
@@ -113,7 +124,17 @@ const DashboardCard = props => {
             <img src={image5} className="feedImage" />
           </div>
         </ImageCont>
-        <Info>house info</Info>
+        <Info>
+          <h5>Downtown LA Luxury Apartment w/ BEST LOCATION DTLA</h5>
+          3 guests
+          <br />
+          Studio
+          <br />
+          2 beds
+          <br />
+          1 bath
+          <br />
+        </Info>
       </Container>
     </div>
   );

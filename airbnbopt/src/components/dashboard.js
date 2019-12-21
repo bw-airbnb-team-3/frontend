@@ -35,7 +35,6 @@ export default Dashboard => {
   return (
     <Content className="content">
       <ContentFeed>
-        <h2>Content here</h2>
         <h3>Hello, *users name here*</h3>
         <h4>Popular Homes this Week</h4>
         <DashboardCard />
