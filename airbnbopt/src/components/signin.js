@@ -1,13 +1,13 @@
 import React from 'react';
+import axios from 'axios';
 import styled from "styled-components";
 import Footer from "./Footer";
-
 
 const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 10% 0%;
+padding-top: 10%;
 `;
 
 const SecondWrap = styled.div`
@@ -18,6 +18,34 @@ max-width: 500px;
 box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 text-align: center;
 align-items: center;
+`;
+
+const ForgotPW = styled.a`
+color:gray;
+display:inline-block;
+text-decoration: none;
+font-weight: 900;
+font-size: 13px;
+`;
+
+
+const SignUp = styled.a`
+color:gray;
+display:inline-block;
+text-decoration: none;
+margin: 35px 0px;
+`;
+
+
+const ForgotDiv = styled.div`
+background-color: #f6f6f6;
+border-top: 1px solid #dce8f1;
+padding: 25px;
+text-align: center;
+-webkit-border-radius: 0 0 10px 10px;
+border-radius: 0 0 10px 10px;
+display: flex;
+flex-direction: column;
 
 `;
 
@@ -26,9 +54,9 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin: 30px;
-&:hover .CreateAcc {
-    background-color: #f6f6f6;
-    color: #56baed;
+&:hover .LogIn {
+  background-color: #f6f6f6;
+  color: #56baed;
 }
 
 `;
@@ -51,23 +79,15 @@ const Button = styled.button`
 background-color: #56baed;
 border: none;
 color: white;
-padding: 5px 60px;
+padding: 15px 80px;
 text-align: center;
 text-decoration: none;
 text-transform: uppercase;
 font-size: 13px;
-font-weight: 900;
 width: 250px;
 height: 55px;
 border-radius: 5px;
 margin-top: 10px;
-`;
-
-const Login = styled.a`
-color:gray;
-display:inline-block;
-text-decoration: none;
-margin: 35px 0px;
 `;
 
 const Span = styled.span`
@@ -78,41 +98,30 @@ font-weight: 900;
 
 
 
-export default Signup => {
+export default Signin => {
     return (
     <Wrapper>
         <SecondWrap>
-          <h1>Sign Up</h1>
+          <h1>Login</h1>
         <Form>
           <Input
               type="text"
               name="textfield"
-              placeholder="First Name"
+              placeholder="username"
    
             />
           <Input
-              type="text"
+              type="password"
               name="textfield"
-              placeholder="Last Name"
+              placeholder="password"
+
             />
-            <Input
-              type="text"
-              name="textfield"
-              placeholder="Email Adress"
-              />
-            <Input
-              type="text"
-              name="textfield"
-              placeholder="Password"
-              />
-            <Input
-              type="text"
-              name="textfield"
-              placeholder="Confirm Password"
-              />
-          <Button className="CreateAcc">Create Account</Button>
+          <Button className="LogIn">Log in</Button>
       </Form>
-      <Login>Already have an ___ account? <Span>Log in</Span></Login>
+      <ForgotDiv>
+        <ForgotPW> Forgot Password?</ForgotPW>
+        <SignUp>Not a member? <Span>Sign up now</Span></SignUp>
+      </ForgotDiv>
         </SecondWrap>
         <footer>
         <Footer/>
