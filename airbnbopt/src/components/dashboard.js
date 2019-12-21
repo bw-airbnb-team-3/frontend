@@ -100,11 +100,30 @@ export default Dashboard => {
           <input type="checkbox" id="heating" />
           <br />
           <label>Air Conditioning</label>
-          <input type="checkbox" id="Air Conditioning" />
+          <input type="checkbox" id="air conditioning" />
           <br />
           <h4>Facilities</h4>
-          <label>Pool</label> {/*checkbox*/}
+          <label>Pool</label>
           <input type="checkbox" id="pool"></input>
+          <br />
+          <label>Gym</label>
+          <input type="checkbox" id="gym" />
+          <br />
+          <label>Free Parking</label>
+          <input type="checkbox" id="parking" />
+          <br />
+          <label>Hot Tub</label>
+          <input type="checkbox" id="hot tub" />
+          <br />
+          <h4>Property Type</h4>
+          <label>House</label>
+          <input type="checkbox" id="house" />
+          <br />
+          <label>Apartment</label>
+          <input type="checkbox" id="apartment" />
+          <br />
+          <label>Bed and Breakfast</label>
+          <input type="checkbox" id="bnb" />
           <br />
         </form>
       </Filter>
