@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Dashboard from "./components/dashboard";
+import DashboardCard from "./components/DashboardCard";
 import Signup from "./components/signup";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import protectedRoute from "./components/protectedRoute";

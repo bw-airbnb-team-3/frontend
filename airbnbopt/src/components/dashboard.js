@@ -38,23 +38,7 @@ export default Dashboard => {
         <h2>Content here</h2>
         <h3>Hello, *users name here*</h3>
         <h4>Popular Homes this Week</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
+        <DashboardCard />
       </ContentFeed>
       <Filter>
         <form>
