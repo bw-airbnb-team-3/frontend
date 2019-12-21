@@ -92,6 +92,16 @@ export default Dashboard => {
             <option value="4">4</option>
           </select>
           <br />
+          <h4>Amenities</h4>
+          <label>Kitchen</label>
+          <input type="checkbox" id="kitchen" />
+          <br />
+          <label>Heating</label>
+          <input type="checkbox" id="heating" />
+          <br />
+          <label>Air Conditioning</label>
+          <input type="checkbox" id="Air Conditioning" />
+          <br />
           <h4>Facilities</h4>
           <label>Pool</label> {/*checkbox*/}
           <input type="checkbox" id="pool"></input>
