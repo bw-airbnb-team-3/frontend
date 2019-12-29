@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import styled from "styled-components";
 import image1 from "../images/Airbnb1.jpg";
 import image2 from "../images/Airbnb2.jpg";
@@ -30,40 +31,83 @@ const Info = styled.div`
 `;
 
 const DashboardCard = props => {
+  const [data, setData] = useState([
+    {
+      id: 1,
+      title: "LA Pool, Privacy and Amazing Views!",
+      guests: "3",
+      rooms: "1",
+      beds: "1",
+      baths: "1.5",
+      image: image1
+    },
+    {
+      id: 2,
+      title: "Burbank near Studios - quiet, safe neighborhood",
+      guests: "2",
+      rooms: "1",
+      beds: "1",
+      baths: "1.5",
+      image: image2
+    },
+    {
+      id: 3,
+      title: "Charming Guests Suite in Hancock Park, 2BD,Pool",
+      guests: "4",
+      rooms: "2",
+      beds: "3",
+      baths: "1",
+      image: image3
+    },
+    {
+      id: 4,
+      title: "Stylish Hollywood Loft with Views",
+      guests: "3",
+      rooms: "1",
+      beds: "1",
+      baths: "1",
+      image: image4
+    },
+    {
+      id: 5,
+      title: "Downtown LA Luxury Apartment w/ BEST LOCATION DTLA",
+      guests: "3",
+      rooms: "1",
+      beds: "2",
+      baths: "1",
+      image: image5
+    }
+  ]);
+
   return (
     <div className="">
-      {/* <<div>
-         <img 
-                src={props}
-                alt="pictures of Most popular homes in LA"
-                ></img>
-            <Title>{props}</Title>
-        </div>>*/}
+      {data.map(({ title, guests, rooms, beds, baths, image }) => (
+        <Container>
+          <ImageCont>
+            <Image>
+              <img
+                src={image}
+                className="feedImage"
+                alt="photo by: https://www.airbnb.com/users/show/30303945"
+              />
+            </Image>
+          </ImageCont>
+          <Info>
+            {" "}
+            <h5>{title}</h5>
+            {guests} guests
+            <br />
+            {rooms} bedroom
+            <br />
+            {beds} beds
+            <br />
+            {baths} baths
+            <br />
+          </Info>
+        </Container>
+      ))}
 
-      <Container>
-        <ImageCont>
-          <Image>
-            <img
-              src={image1}
-              className="feedImage"
-              alt="photo by: https://www.airbnb.com/users/show/30303945"
-            />
-          </Image>
-        </ImageCont>
-        <Info>
-          {" "}
-          <h5>LA Pool, Privacy and Amazing Views!</h5>
-          3 guests
-          <br />
-          1 bedroom
-          <br />
-          2 beds
-          <br />
-          1.5 baths
-          <br />
-        </Info>
-      </Container>
-      <Container>
+      {/*<Container>
         <ImageCont>
           <Image>
             <img src={image2} className="feedImage" />
@@ -135,7 +179,7 @@ const DashboardCard = props => {
           1 bath
           <br />
         </Info>
-      </Container>
+      </Container>*/}
     </div>
   );
 };

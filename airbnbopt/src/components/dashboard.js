@@ -6,12 +6,16 @@ import DashboardCard from "./DashboardCard";
 const Content = styled.div`
   display: flex;
   justify-content: center;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Filter = styled.div`
   align-text: center;
   width: 250px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
 `;
 const ContentFeed = styled.div`
   align-text: center;
@@ -37,9 +41,10 @@ export default Dashboard => {
       <ContentFeed>
         <h3>Hello, *users name here*</h3>
         <h4>Popular Homes this Week</h4>
-        <DashboardCard />
       </ContentFeed>
+
       <Filter>
+        <DashboardCard />
         <form>
           <h3>Filter Results</h3>
           <h4>Rooms and Beds</h4>
