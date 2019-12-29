@@ -8,7 +8,7 @@ import image4 from "../images/Airbnb4.jpg";
 import image5 from "../images/Airbnb5.jpg";
 
 const Container = styled.div`
-  height: 200px;
+  height: 220px;
   width: 550px;
   border-bottom: teal dashed 2px;
   display: flex;
@@ -18,7 +18,7 @@ const Container = styled.div`
 
 const ImageCont = styled.div`
   width: 275px;
-  align-text: center;
+  text-align: center;
 `;
 
 const Image = styled.div`
@@ -35,6 +35,7 @@ const DashboardCard = props => {
     {
       id: 1,
       title: "LA Pool, Privacy and Amazing Views!",
+      price: "$150 / night",
       guests: "3",
       rooms: "1",
       beds: "1",
@@ -44,6 +45,7 @@ const DashboardCard = props => {
     {
       id: 2,
       title: "Burbank near Studios - quiet, safe neighborhood",
+      price: "$64 / night",
       guests: "2",
       rooms: "1",
       beds: "1",
@@ -53,6 +55,7 @@ const DashboardCard = props => {
     {
       id: 3,
       title: "Charming Guests Suite in Hancock Park, 2BD,Pool",
+      price: "$80 / night",
       guests: "4",
       rooms: "2",
       beds: "3",
@@ -62,6 +65,7 @@ const DashboardCard = props => {
     {
       id: 4,
       title: "Stylish Hollywood Loft with Views",
+      price: "$100 / night",
       guests: "3",
       rooms: "1",
       beds: "1",
@@ -71,6 +75,7 @@ const DashboardCard = props => {
     {
       id: 5,
       title: "Downtown LA Luxury Apartment w/ BEST LOCATION DTLA",
+      price: "$89 / night",
       guests: "3",
       rooms: "1",
       beds: "2",
@@ -81,7 +86,7 @@ const DashboardCard = props => {
 
   return (
     <div className="">
-      {data.map(({ title, guests, rooms, beds, baths, image }) => (
+      {data.map(({ title, price, guests, rooms, beds, baths, image }) => (
         <Container>
           <ImageCont>
             <Image>
@@ -95,6 +100,8 @@ const DashboardCard = props => {
           <Info>
             {" "}
             <h5>{title}</h5>
+            {price}
+            <br />
             {guests} guests
             <br />
             {rooms} bedroom
@@ -106,80 +113,6 @@ const DashboardCard = props => {
           </Info>
         </Container>
       ))}
-
-      {/*<Container>
-        <ImageCont>
-          <Image>
-            <img src={image2} className="feedImage" />
-          </Image>
-        </ImageCont>
-        <Info>
-          <h5>Burbank near Studios - quiet, safe neighborhood</h5>
-          2 Guests
-          <br />
-          1 Bedroom
-          <br />
-          1 bed
-          <br />
-          1.5 Shared baths
-          <br />
-        </Info>
-      </Container>
-      <Container>
-        <ImageCont>
-          <Image>
-            <img src={image3} className="feedImage" />
-          </Image>
-        </ImageCont>
-        <Info>
-          {" "}
-          <h5>Charming Guests Suite in Hancock Park, 2BD,Pool</h5>
-          4 Guests
-          <br />
-          2 Bedrooms
-          <br />
-          3 beds
-          <br />
-          1 private bath
-          <br />
-        </Info>
-      </Container>
-      <Container>
-        <ImageCont>
-          <Image>
-            <img src={image4} className="feedImage" />
-          </Image>
-        </ImageCont>
-        <Info>
-          <h5>Stylish Hollywood Loft with Views</h5>
-          3 Guests
-          <br />
-          1 Bedroom
-          <br />
-          1 bed
-          <br />
-          1 bath
-          <br />
-        </Info>
-      </Container>
-      <Container>
-        <ImageCont>
-          <div>
-            <img src={image5} className="feedImage" />
-          </div>
-        </ImageCont>
-        <Info>
-          <h5>Downtown LA Luxury Apartment w/ BEST LOCATION DTLA</h5>
-          3 guests
-          <br />
-          Studio
-          <br />
-          2 beds
-          <br />
-          1 bath
-          <br />
-        </Info>
-      </Container>*/}
     </div>
   );
 };

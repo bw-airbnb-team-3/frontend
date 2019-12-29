@@ -11,14 +11,14 @@ const Content = styled.div`
 `;
 
 const Filter = styled.div`
-  align-text: center;
+  text-align: center;
   width: 250px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
 `;
 const ContentFeed = styled.div`
-  align-text: center;
+  text-align: center;
   width: 550px;
 `;
 
