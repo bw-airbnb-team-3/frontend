@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Route, Redirect } from "react-router-dom";
 import axios from 'axios';
 import styled from "styled-components";
 
@@ -91,9 +90,9 @@ margin-top: 10px;
 
 
 
-const Signup = (props) =>  {
+const Login = (props) =>  {
 
- const [signUp, setsignUp] = useState(
+ const [login, setLogin] = useState(
   {
    username: '',
    password: '',
@@ -101,20 +100,21 @@ const Signup = (props) =>  {
 );
 
 const handleInput = e => {
-  setsignUp({
-      ...signUp,
+  setLogin({
+      ...login,
       [e.target.name]: e.target.value
   });
-  console.log(signUp)
+  console.log(login)
 };
 
-const handelSignUp = e => {
+const handelLogin = e => {
   e.preventDefault();
   axios
-    .post("https://airbnb-bw.herokuapp.com/api/auth/register", signUp)
+    .post("https://airbnb-bw.herokuapp.com/api/auth/login", login)
     .then(res => {
       console.log(res);
-      props.history.push("/login");
+      localStorage.setItem("token", res.data.payload);
+      props.history.push("/protected");
     })
     .catch(err =>
       console.log(
@@ -126,23 +126,23 @@ const handelSignUp = e => {
     return (
     <Wrapper>
         <SecondWrap>
-          <h1>Register</h1>
-        <Form onSubmit={handelSignUp}>
+          <h1>Login</h1>
+        <Form onSubmit={handelLogin}>
           <Input
               type="text"
               name="username"
               placeholder="username"
-              value={signUp.username}
+              value={login.username}
               onChange={handleInput}
             />
           <Input
               type="password"
               name="password"
               placeholder="password"
-              value={signUp.password}
+              value={login.password}
               onChange={handleInput}
             />
-          <Button>Sign Up</Button>
+          <Button>Log in</Button>
       </Form>
       <ForgotDiv>
         <ForgotPW> Forgot Password?</ForgotPW>
@@ -152,4 +152,4 @@ const handelSignUp = e => {
     )
 }
 
-export default Signup;
+export default Login;
