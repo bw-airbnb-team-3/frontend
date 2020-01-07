@@ -12,7 +12,7 @@ const ProtectedRoute = ({ component: Component, ...theRest }) => {
             console.log(
               "Rendering: ", Route 
             );
-            return <Redirect to="/signup" />;
+            
           }
         }}
       />

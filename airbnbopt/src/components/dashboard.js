@@ -4,19 +4,40 @@ import styled from "styled-components";
 import DashboardCard from "./DashboardCard";
 
 const Content = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: row-reverse;
+
 `;
 
 const Filter = styled.div`
-  align-text: center;
-  width: 250px;
+  display: flex;
+  flex-direction: row-reverse;
 `;
 const ContentFeed = styled.div`
-  align-text: center;
-  width: 550px;
+ 
 `;
+
+const Form = styled.form`
+margin-top: 40px;
+padding-top: 10px;
+background-color: #FFDAB9;
+width: 600px;
+height: 950px;
+
+`;
+
+const SubTitles = styled.h3`
+text-align: left;
+padding-left: 15px;
+font-weight: 900;
+padding-top: 50px;
+`;
+
+const Label = styled.label`
+display: flex;
+justify-content:flex-end;
+padding-right: 100px;
+padding-top: 20px;
+`;
+
 
 export default Dashboard => {
   const [,] = useState([]);
@@ -35,32 +56,16 @@ export default Dashboard => {
   return (
     <Content className="content">
       <ContentFeed>
-        <h2>Content here</h2>
-        <h3>Hello, *users name here*</h3>
-        <h4>Popular Homes this Week</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
+        <h1>Hello, *users name here*</h1>
       </ContentFeed>
+
       <Filter>
-        <form>
-          <h3>Filter Results</h3>
-          <h4>Rooms and Beds</h4>
-          <label>Rooms</label> {/*dropdown here*/}
+        <DashboardCard/>
+        <Form>
+          <h2>Filter</h2>
+          <SubTitles>Rooms and Beds</SubTitles>
+          <Label>
+          <label>Rooms </label> {/*dropdown here*/}
           <select>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -69,7 +74,9 @@ export default Dashboard => {
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
+          </Label>
           <br />
+          <Label>
           <label>Beds</label>
           <select>
             <option value="1">1</option>
@@ -81,9 +88,10 @@ export default Dashboard => {
             <option value="7">7</option>
             <option value="8">8</option>
             <option value="9">9</option>
-            <option value="10">10</option>
           </select>
+          </Label>
           <br />
+          <Label>
           <label>Bathrooms</label> {/*dropdown here*/}
           <select>
             <option value="1">1</option>
@@ -91,12 +99,42 @@ export default Dashboard => {
             <option value="3">3</option>
             <option value="4">4</option>
           </select>
+          </Label>
           <br />
-          <h4>Facilities</h4>
-          <label>Pool</label> {/*checkbox*/}
+          <SubTitles>Amenities</SubTitles>
+          <label>Kitchen</label>
+          <input type="checkbox" id="kitchen" />
+          <br />
+          <label>Heating</label>
+          <input type="checkbox" id="heating" />
+          <br />
+          <label>Air Conditioning</label>
+          <input type="checkbox" id="air conditioning" />
+          <br />
+          <SubTitles>Facilities</SubTitles>
+          <label>Pool</label>
           <input type="checkbox" id="pool"></input>
           <br />
-        </form>
+          <label>Gym</label>
+          <input type="checkbox" id="gym" />
+          <br />
+          <label>Free Parking</label>
+          <input type="checkbox" id="parking" />
+          <br />
+          <label>Hot Tub</label>
+          <input type="checkbox" id="hot tub" />
+          <br />
+          <SubTitles>Property Type</SubTitles>
+          <label>House</label>
+          <input type="checkbox" id="house" />
+          <br />
+          <label>Apartment</label>
+          <input type="checkbox" id="apartment" />
+          <br />
+          <label>Bed and Breakfast</label>
+          <input type="checkbox" id="bnb" />
+          <br />
+        </Form>
       </Filter>
     </Content>
   );
