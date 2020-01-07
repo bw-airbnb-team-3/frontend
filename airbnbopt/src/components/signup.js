@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-import { Route, Redirect } from "react-router-dom";
+import { Route, Redirect, Link } from "react-router-dom";
 import axios from 'axios';
-=======
-import React from 'react';
->>>>>>> 6024d20160d7e16f06efc9156c23ba8b80478059
 import styled from "styled-components";
 import Footer from "./Footer";
 
@@ -83,9 +79,7 @@ font-weight: 900;
 `;
 
 
-
-<<<<<<< HEAD
-const Signup = (props) =>  {
+/*const Signup = (props) =>  {
 
  const [signUp, setsignUp] = useState(
   {
@@ -136,21 +130,54 @@ const handelSignUp = e => {
               value={signUp.password}
               onChange={handleInput}
             />
-          <Button>Sign Up</Button>
-=======
-export default Signup => {
+          <Button>Sign Up</Button>*/
+
+const Signup = (props) => {
+
+  const [signUp, setsignUp] = useState(
+    {
+     username: '',
+     password: '',
+   }
+  );
+
+  const handleInput = e => {
+    setsignUp({
+        ...signUp,
+        [e.target.name]: e.target.value
+    });
+    console.log(signUp)
+  };
+
+  const handelSignUp = e => {
+    e.preventDefault();
+    axios
+      .post("https://airbnb-bw.herokuapp.com/api/auth/register", signUp)
+      .then(res => {
+        console.log(res);
+        props.history.push("/login");
+      })
+      .catch(err =>
+        console.log(
+          err.message
+        )
+      );
+  };
+
+
     return (
     <Wrapper>
         <SecondWrap>
           <h1>Sign Up</h1>
-        <Form>
+        <Form onSubmit={handelSignUp}>
           <Input
               type="text"
               name="textfield"
-              placeholder="First Name"
-   
+              placeholder="User Name"
+              value={signUp.username}
+              onChange={handleInput}
             />
-          <Input
+          {/* <Input
               type="text"
               name="textfield"
               placeholder="Last Name"
@@ -158,22 +185,24 @@ export default Signup => {
             <Input
               type="text"
               name="textfield"
-              placeholder="Email Adress"
-              />
+              placeholder="User Name"
+
+              /> */}
             <Input
               type="text"
               name="textfield"
               placeholder="Password"
+              value={signUp.password}
+              onChange={handleInput}
               />
-            <Input
+            {/* <Input
               type="text"
               name="textfield"
               placeholder="Confirm Password"
-              />
+              /> */}
           <Button className="CreateAcc">Create Account</Button>
->>>>>>> 6024d20160d7e16f06efc9156c23ba8b80478059
       </Form>
-      <Login>Already have an ___ account? <Span>Log in</Span></Login>
+      <Span>Already have an ___ account? <Link to="/login">Log in</Link> </Span>
         </SecondWrap>
         <footer>
         <Footer/>
