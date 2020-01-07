@@ -9,7 +9,7 @@ import Header from './components/header';
 import Footer from './components/Footer';
 
 function App() {
-  return (/*
+  return (
     <Router>
       <div className="App">
         <Switch>
@@ -18,14 +18,8 @@ function App() {
           <Route component={Signup} />
         </Switch>
       </div>
-    </Router>*/
-    <div className="App">
-      <Header/>
-      <Signin/>
-      {/* <Signup/> */}
-      {/* <Dashboard/> */}
-      
-    </div>
+    </Router>
+   
   );
 }
 
