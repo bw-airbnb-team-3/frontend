@@ -1,54 +1,29 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Route, Redirect } from "react-router-dom";
 import axios from 'axios';
+=======
+import React from 'react';
+>>>>>>> 6024d20160d7e16f06efc9156c23ba8b80478059
 import styled from "styled-components";
+import Footer from "./Footer";
+
 
 const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-flex-direction: column;
-justify-content: center;
-width:100%;
-min-height: 100%;
-padding: 20px;
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-
-
+padding: 10% 0%;
 `;
 
 const SecondWrap = styled.div`
--webkit-border-radius: 10px 10px 10px 10px;
 border-radius: 10px 10px 10px 10px;
 background: #fff;
 width: 50%;
 max-width: 500px;
-postion: relative;
-padding: 0px;
--webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 text-align: center;
 align-items: center;
-
-`;
-
-const ForgotPW = styled.a`
-color:#92badd;
-display:inline-block;
-text-decoration: none;
-font-weight: 900;
-`;
-
-const ForgotDiv = styled.div`
-background-color: #f6f6f6;
-border-top: 1px solid #dce8f1;
-padding: 25px;
-text-align: center;
--webkit-border-radius: 0 0 10px 10px;
-border-radius: 0 0 10px 10px;
 
 `;
 
@@ -57,6 +32,11 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin: 30px;
+&:hover .CreateAcc {
+    background-color: #f6f6f6;
+    color: #56baed;
+}
+
 `;
 
 const Input = styled.input`
@@ -77,20 +57,34 @@ const Button = styled.button`
 background-color: #56baed;
 border: none;
 color: white;
-padding: 15px 80px;
+padding: 5px 60px;
 text-align: center;
 text-decoration: none;
 text-transform: uppercase;
 font-size: 13px;
+font-weight: 900;
 width: 250px;
 height: 55px;
 border-radius: 5px;
 margin-top: 10px;
+`;
+
+const Login = styled.a`
+color:gray;
+display:inline-block;
+text-decoration: none;
+margin: 35px 0px;
+`;
+
+const Span = styled.span`
+color:#92badd;
+font-weight: 900;
 
 `;
 
 
 
+<<<<<<< HEAD
 const Signup = (props) =>  {
 
  const [signUp, setsignUp] = useState(
@@ -143,11 +137,47 @@ const handelSignUp = e => {
               onChange={handleInput}
             />
           <Button>Sign Up</Button>
+=======
+export default Signup => {
+    return (
+    <Wrapper>
+        <SecondWrap>
+          <h1>Sign Up</h1>
+        <Form>
+          <Input
+              type="text"
+              name="textfield"
+              placeholder="First Name"
+   
+            />
+          <Input
+              type="text"
+              name="textfield"
+              placeholder="Last Name"
+            />
+            <Input
+              type="text"
+              name="textfield"
+              placeholder="Email Adress"
+              />
+            <Input
+              type="text"
+              name="textfield"
+              placeholder="Password"
+              />
+            <Input
+              type="text"
+              name="textfield"
+              placeholder="Confirm Password"
+              />
+          <Button className="CreateAcc">Create Account</Button>
+>>>>>>> 6024d20160d7e16f06efc9156c23ba8b80478059
       </Form>
-      <ForgotDiv>
-        <ForgotPW> Forgot Password?</ForgotPW>
-      </ForgotDiv>
+      <Login>Already have an ___ account? <Span>Log in</Span></Login>
         </SecondWrap>
+        <footer>
+        <Footer/>
+        </footer>
     </Wrapper>
     )
 }

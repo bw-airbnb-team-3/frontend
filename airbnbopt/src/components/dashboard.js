@@ -6,15 +6,19 @@ import DashboardCard from "./DashboardCard";
 const Content = styled.div`
   display: flex;
   justify-content: center;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Filter = styled.div`
-  align-text: center;
+  text-align: center;
   width: 250px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
 `;
 const ContentFeed = styled.div`
-  align-text: center;
+  text-align: center;
   width: 550px;
 `;
 
@@ -35,28 +39,12 @@ export default Dashboard => {
   return (
     <Content className="content">
       <ContentFeed>
-        <h2>Content here</h2>
         <h3>Hello, *users name here*</h3>
         <h4>Popular Homes this Week</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
-        <h4>Feed here</h4>
       </ContentFeed>
+
       <Filter>
+        <DashboardCard />
         <form>
           <h3>Filter Results</h3>
           <h4>Rooms and Beds</h4>
@@ -92,9 +80,38 @@ export default Dashboard => {
             <option value="4">4</option>
           </select>
           <br />
+          <h4>Amenities</h4>
+          <label>Kitchen</label>
+          <input type="checkbox" id="kitchen" />
+          <br />
+          <label>Heating</label>
+          <input type="checkbox" id="heating" />
+          <br />
+          <label>Air Conditioning</label>
+          <input type="checkbox" id="air conditioning" />
+          <br />
           <h4>Facilities</h4>
-          <label>Pool</label> {/*checkbox*/}
+          <label>Pool</label>
           <input type="checkbox" id="pool"></input>
+          <br />
+          <label>Gym</label>
+          <input type="checkbox" id="gym" />
+          <br />
+          <label>Free Parking</label>
+          <input type="checkbox" id="parking" />
+          <br />
+          <label>Hot Tub</label>
+          <input type="checkbox" id="hot tub" />
+          <br />
+          <h4>Property Type</h4>
+          <label>House</label>
+          <input type="checkbox" id="house" />
+          <br />
+          <label>Apartment</label>
+          <input type="checkbox" id="apartment" />
+          <br />
+          <label>Bed and Breakfast</label>
+          <input type="checkbox" id="bnb" />
           <br />
         </form>
       </Filter>

@@ -9,6 +9,7 @@ import Header from './components/header';
 
 function App() {
   return (
+
     <Router>
       <div className="App">
       <Header/>
@@ -20,7 +21,9 @@ function App() {
           <Route component={Login} />
         </Switch>
       </div>
+
     </Router>
+
   );
 }
 
