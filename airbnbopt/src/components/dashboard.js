@@ -12,13 +12,15 @@ const Filter = styled.div`
   flex-direction: row-reverse;
 `;
 const ContentFeed = styled.div`
+padding-right: 1200px;
  
 `;
 
 const Form = styled.form`
-margin-top: 40px;
-padding-top: 10px;
-background-color: #FFDAB9;
+margin-top: 30px;
+padding-top: 5px;
+background: #fff;
+box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 width: 600px;
 height: 950px;
 
@@ -28,14 +30,18 @@ const SubTitles = styled.h3`
 text-align: left;
 padding-left: 15px;
 font-weight: 900;
-padding-top: 50px;
+padding-top: 15px;
 `;
 
-const Label = styled.label`
+const Features = styled.div`
 display: flex;
 justify-content:flex-end;
 padding-right: 100px;
-padding-top: 20px;
+padding-top: 10px;
+`;
+
+const Label = styled.label`
+padding-right: 5px;
 `;
 
 
@@ -64,8 +70,8 @@ export default Dashboard => {
         <Form>
           <h2>Filter</h2>
           <SubTitles>Rooms and Beds</SubTitles>
-          <Label>
-          <label>Rooms </label> {/*dropdown here*/}
+          <Features>
+          <Label>Rooms:</Label> {/*dropdown here*/}
           <select>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -74,10 +80,10 @@ export default Dashboard => {
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
-          </Label>
+          </Features>
           <br />
-          <Label>
-          <label>Beds</label>
+          <Features>
+          <Label>Beds:</Label>
           <select>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -89,50 +95,65 @@ export default Dashboard => {
             <option value="8">8</option>
             <option value="9">9</option>
           </select>
-          </Label>
+          </Features>
           <br />
-          <Label>
-          <label>Bathrooms</label> {/*dropdown here*/}
+          <Features>
+          <Label>Bathrooms:</Label> {/*dropdown here*/}
           <select>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
           </select>
-          </Label>
+          </Features>
           <br />
           <SubTitles>Amenities</SubTitles>
-          <label>Kitchen</label>
+          <Features>
+          <Label>Kitchen</Label>
           <input type="checkbox" id="kitchen" />
+          </Features>
           <br />
-          <label>Heating</label>
+          <Features>
+          <Label>Heating</Label>
           <input type="checkbox" id="heating" />
+          </Features>
           <br />
-          <label>Air Conditioning</label>
+          <Features>
+          <Label>Air Conditioning</Label>
           <input type="checkbox" id="air conditioning" />
+          </Features>
           <br />
           <SubTitles>Facilities</SubTitles>
-          <label>Pool</label>
+          <Features>
+          <Label>Pool</Label>
           <input type="checkbox" id="pool"></input>
+          </Features>
           <br />
-          <label>Gym</label>
+          <Features>
+          <Label>Gym</Label>
           <input type="checkbox" id="gym" />
+          </Features>
           <br />
-          <label>Free Parking</label>
+          <Features>
+          <Label>Free Parking</Label>
           <input type="checkbox" id="parking" />
-          <br />
-          <label>Hot Tub</label>
-          <input type="checkbox" id="hot tub" />
+          </Features>
           <br />
           <SubTitles>Property Type</SubTitles>
-          <label>House</label>
+          <Features>
+          <Label>House</Label>
           <input type="checkbox" id="house" />
+          </Features>
           <br />
-          <label>Apartment</label>
+          <Features>
+          <Label>Apartment</Label>
           <input type="checkbox" id="apartment" />
+          </Features>
           <br />
-          <label>Bed and Breakfast</label>
+          <Features>
+          <Label>Bed and Breakfast</Label>
           <input type="checkbox" id="bnb" />
+          </Features>
           <br />
         </Form>
       </Filter>

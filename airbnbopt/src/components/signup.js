@@ -65,10 +65,10 @@ border-radius: 5px;
 margin-top: 10px;
 `;
 
-const Login = styled.a`
+const Login = styled.div`
 color:gray;
+text-decoration: none
 display:inline-block;
-text-decoration: none;
 margin: 35px 0px;
 `;
 
@@ -202,7 +202,7 @@ const Signup = (props) => {
               /> */}
           <Button className="CreateAcc">Create Account</Button>
       </Form>
-      <Span>Already have an ___ account? <Link to="/login">Log in</Link> </Span>
+      <Span>Already have an ___ account? <Link to="/login"><Login>Log in</Login></Link> </Span>
         </SecondWrap>
         <footer>
         <Footer/>

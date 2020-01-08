@@ -16,17 +16,25 @@ margin-left:100px;
 `;
 
 const Title = styled.h2`
-margin-top: 50px;
+margin-top: 40px;
+font-weight: 900;
+font-size: 27px
 `;
 
 
 const Container = styled.div`
 width: 450px;
 height: 350px;
-padding-top: 100px;
+padding-top: 50px;
 `;
 
 const Info = styled.div`
+`;
+
+const Subtitle = styled.h5`
+font-weight: 900;
+font-size: 17px;
+
 `;
 
 
@@ -101,7 +109,7 @@ const DashboardCard = props => {
     <WrappedDiv>
       {data.map(({ title, price, guests, rooms, beds, baths, image }) => (
         <Container>
-          <h5>{title}</h5>
+          <Subtitle>{title}</Subtitle>
           <Info>
               <img
                 src={image}
