@@ -36,10 +36,16 @@ export default Header => {
         <h2>Los Angeles</h2>
       </Logo>
       <Nav className="nav-bar">
-        <NavLinks href="#">Home</NavLinks>
-        <NavLinks href="#">About</NavLinks>
-        <NavLinks href="#">Login</NavLinks>
-        <NavLinks href="#">Signup</NavLinks>
+        <NavLinks href="https://dreamy-goldberg-0edc2e.netlify.com/">
+          Home
+        </NavLinks>
+        <NavLinks href="https://about-page.netlify.com/">About</NavLinks>
+        <Link to="/login">
+          <NavLinks href="#">Login</NavLinks>
+        </Link>
+        <Link to="/signup">
+          <NavLinks href="#">Signup</NavLinks>
+        </Link>
       </Nav>
     </Wrapper>
   );
