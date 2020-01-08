@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
 `;
 
 const Logo = styled.div`
@@ -32,7 +33,7 @@ export default Header => {
   return (
     <Wrapper className="nav-container">
       <Logo>
-        <h2>Logo Here</h2>
+        <h2>Los Angeles</h2>
       </Logo>
       <Nav className="nav-bar">
         <NavLinks href="#">Home</NavLinks>
