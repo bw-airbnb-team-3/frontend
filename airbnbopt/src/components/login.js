@@ -110,7 +110,7 @@ const handleInput = e => {
 const handelLogin = e => {
   e.preventDefault();
   axios
-    .post("https://airbnb-bw.herokuapp.com/api/auth/login", login)
+    .post("https://airbnb-bw.herokuapp.com/api/login", login)
     .then(res => {
       console.log(res);
       localStorage.setItem("token", res.data.payload);
