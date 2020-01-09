@@ -7,28 +7,37 @@ import image3 from "../images/Airbnb3.jpg";
 import image4 from "../images/Airbnb4.jpg";
 import image5 from "../images/Airbnb5.jpg";
 
+
+const WrappedDiv = styled.div`
+display: flex;
+flex-wrap: wrap;
+margin-left:100px;
+
+`;
+
+const Title = styled.h2`
+margin-top: 40px;
+font-weight: 900;
+font-size: 27px
+`;
+
+
 const Container = styled.div`
-  height: 220px;
-  width: 550px;
-  border-bottom: teal dashed 2px;
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-`;
-
-const ImageCont = styled.div`
-  width: 275px;
-  text-align: center;
-`;
-
-const Image = styled.div`
-  height: 220px;
-  width: 255px;
+width: 450px;
+height: 350px;
+padding-top: 50px;
 `;
 
 const Info = styled.div`
-  width: 275px;
 `;
+
+const Subtitle = styled.h5`
+font-weight: 900;
+font-size: 17px;
+
+`;
+
+
 
 const DashboardCard = props => {
   const [data, setData] = useState([
@@ -81,25 +90,34 @@ const DashboardCard = props => {
       beds: "2",
       baths: "1",
       image: image5
+    },
+    {
+      id: 6,
+      title: "Downtown LA Luxury Apartment w/ BEST LOCATION DTLA",
+      price: "$89 / night",
+      guests: "3",
+      rooms: "1",
+      beds: "2",
+      baths: "1",
+      image: image5
     }
   ]);
 
   return (
-    <div className="">
+    <div>
+      <Title>Popular Homes this Week</Title>
+    <WrappedDiv>
       {data.map(({ title, price, guests, rooms, beds, baths, image }) => (
         <Container>
-          <ImageCont>
-            <Image>
+          <Subtitle>{title}</Subtitle>
+          <Info>
               <img
                 src={image}
                 className="feedImage"
                 alt="photo by: https://www.airbnb.com/users/show/30303945"
               />
-            </Image>
-          </ImageCont>
-          <Info>
             {" "}
-            <h5>{title}</h5>
+            <br />
             {price}
             <br />
             {guests} guests
@@ -113,7 +131,7 @@ const DashboardCard = props => {
           </Info>
         </Container>
       ))}
-    </div>
+    </WrappedDiv></div>
   );
 };
 
