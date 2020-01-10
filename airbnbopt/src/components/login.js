@@ -87,28 +87,23 @@ const Login = props => {
     setLogin({
       ...login,
       [e.target.name]: e.target.value
-  });
-  console.log(login)
-};
+    });
+    console.log(login);
+  };
 
-const handelLogin = e => {
-  e.preventDefault();
-  axios
-    .post("https://airbnb-bw.herokuapp.com/api/login", login)
-    .then(res => {
-      console.log(res);
-      console.log(res.data.token);
-      localStorage.setItem("token", res.data.token);
-      props.history.push("/protected");
-    })
-    .catch(err =>
-      console.log(
-        err.message
-      )
-    );
-};
+  const handelLogin = e => {
+    e.preventDefault();
+    axios
+      .post("https://airbnb-bw.herokuapp.com/api/auth/login", login)
+      .then(res => {
+        console.log(res);
+        localStorage.setItem("token", res.data.payload);
+        props.history.push("/protected");
+      })
+      .catch(err => console.log(err.message));
+  };
 
-    return (
+  return (
     <Wrapper>
       <SecondWrap>
         <h1>Login</h1>
