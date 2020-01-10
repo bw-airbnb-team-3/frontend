@@ -6,6 +6,7 @@ import Login from './components/login';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import ProtectedRoute from './components/ProtectedRoute';
 import Header from './components/header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route component={Signup} />
           <Route component={Login} />
         </Switch>
+        <Footer/>
       </div>
     </Router>
 

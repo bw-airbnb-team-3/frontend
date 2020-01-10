@@ -9,29 +9,48 @@ const Wrapper = styled.div`
   align-items: center;
   box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+
 `;
 
 const Logo = styled.div`
   padding: 0px 0px 0px 50px;
   color: gray;
   font-family: "Bungee Inline", cursive;
+  @media (max-width:720px) {
+    padding: 0px 0px 0px 20px;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: 70px;
+  font-size: 60px; 
+  @media (max-width:720px) {
+    font-size: 50px;
+  }
 `;
 
 const Nav = styled.nav`
   display: flex;
+  
 `;
 
 const NavLinks = styled.a`
-  text-decoration: none;
+ text-decoration: none;
   color: gray;
   padding: 0px 50px 0px 0px;
   font-weight: 500;
   font-family: "Bungee Inline", cursive;
+  @media (max-width:720px) {
+    padding: 0px 10px 0px 0px;
+  }
 `;
+
+const StyledLink = styled(Link)`
+text-decoration: none;
+`;
+
+
+
+
 
 export default Header => {
   return (
@@ -40,16 +59,16 @@ export default Header => {
         <Title>LA Opt</Title>
       </Logo>
       <Nav className="nav-bar">
-        <NavLinks href="https://dreamy-goldberg-0edc2e.netlify.com/">
+        <NavLinks href="https://la-opt.netlify.com/">
           Home
         </NavLinks>
-        <NavLinks href="https://about-page.netlify.com/">About</NavLinks>
-        <Link to="/login">
-          <NavLinks href="#">Login</NavLinks>
-        </Link>
-        <Link to="/signup">
-          <NavLinks href="#">Signup</NavLinks>
-        </Link>
+        <NavLinks href="https://la-opt.netlify.com/about.html">About</NavLinks>
+        <StyledLink to="/login">
+          <NavLinks>Login</NavLinks>
+        </StyledLink>
+         <StyledLink className="" to="/signup">
+         <NavLinks>Signup</NavLinks>
+        </StyledLink>
       </Nav>
     </Wrapper>
   );
