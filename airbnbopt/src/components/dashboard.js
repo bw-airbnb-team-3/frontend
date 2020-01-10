@@ -12,13 +12,15 @@ const Filter = styled.div`
   flex-direction: row-reverse;
 `;
 const ContentFeed = styled.div`
-padding-right: 1200px;
+padding-left: 15px;
+
  
 `;
 
 const Form = styled.form`
 margin-top: 30px;
 padding-top: 5px;
+margin-left: 15px;
 background: #fff;
 box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 width: 600px;
@@ -26,9 +28,14 @@ height: 950px;
 
 `;
 
+const Title = styled.h2`
+text-align: center;
+`;
+
+
 const SubTitles = styled.h3`
 text-align: left;
-padding-left: 15px;
+padding-left: 20px;
 font-weight: 900;
 padding-top: 15px;
 `;
@@ -41,7 +48,7 @@ padding-top: 10px;
 `;
 
 const Label = styled.label`
-padding-right: 5px;
+padding-right: 10px;
 `;
 
 
@@ -68,7 +75,7 @@ export default Dashboard => {
       <Filter>
         <DashboardCard/>
         <Form>
-          <h2>Filter</h2>
+          <Title>Filter</Title>
           <SubTitles>Rooms and Beds</SubTitles>
           <Features>
           <Label>Rooms:</Label> {/*dropdown here*/}

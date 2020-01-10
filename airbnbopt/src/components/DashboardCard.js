@@ -11,7 +11,8 @@ import image5 from "../images/Airbnb5.jpg";
 const WrappedDiv = styled.div`
 display: flex;
 flex-wrap: wrap;
-margin-left:100px;
+margin-left:200px;
+text-align: center;
 
 `;
 
@@ -19,6 +20,7 @@ const Title = styled.h2`
 margin-top: 40px;
 font-weight: 900;
 font-size: 27px
+text-align: center;
 `;
 
 
@@ -29,6 +31,7 @@ padding-top: 50px;
 `;
 
 const Info = styled.div`
+text-align: center;
 `;
 
 const Subtitle = styled.h5`

@@ -5,6 +5,8 @@ import styled from "styled-components";
 import Footer from "./Footer";
 
 
+
+
 const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
@@ -30,7 +32,7 @@ align-items: center;
 margin: 30px;
 &:hover .CreateAcc {
     background-color: #f6f6f6;
-    color: #56baed;
+    color: #FD5C63;
 }
 
 `;
@@ -50,7 +52,7 @@ border-radius: 5px;
 `;
 
 const Button = styled.button`
-background-color: #56baed;
+background-color: #FD5C63;
 border: none;
 color: white;
 padding: 5px 60px;
@@ -164,7 +166,6 @@ const Signup = (props) => {
       );
   };
 
-
     return (
     <Wrapper>
         <SecondWrap>
@@ -176,6 +177,7 @@ const Signup = (props) => {
               placeholder="User Name"
               value={signUp.username}
               onChange={handleInput}
+              required
             />
           {/* <Input
               type="text"
@@ -194,13 +196,21 @@ const Signup = (props) => {
               placeholder="Password"
               value={signUp.password}
               onChange={handleInput}
+              required
               />
             {/* <Input
               type="text"
               name="textfield"
               placeholder="Confirm Password"
               /> */}
-          <Button className="CreateAcc">Create Account</Button>
+          <Button 
+          onClick={e => {
+            e.target.style.background = '#FEBDC0';
+          }}
+          onMouseOver={e => {
+            e.target.style.cursor ="pointer";
+          }}
+          className="CreateAcc">Create Account</Button>
       </Form>
       <Span>Already have an ___ account? <Link to="/login"><Login>Log in</Login></Link> </Span>
         </SecondWrap>
