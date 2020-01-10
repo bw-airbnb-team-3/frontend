@@ -154,7 +154,7 @@ const Signup = (props) => {
   const handelSignUp = e => {
     e.preventDefault();
     axios
-      .post("https://airbnb-bw.herokuapp.com/api/auth/register", signUp)
+      .post("https://airbnb-bw.herokuapp.com/api/register", signUp)
       .then(res => {
         console.log(res);
         props.history.push("/login");
@@ -173,44 +173,21 @@ const Signup = (props) => {
         <Form onSubmit={handelSignUp}>
           <Input
               type="text"
-              name="textfield"
-              placeholder="User Name"
+              name="username"
+              placeholder="username"
               value={signUp.username}
               onChange={handleInput}
               required
             />
-          {/* <Input
-              type="text"
-              name="textfield"
-              placeholder="Last Name"
-            />
             <Input
-              type="text"
-              name="textfield"
-              placeholder="User Name"
-
-              /> */}
-            <Input
-              type="text"
-              name="textfield"
-              placeholder="Password"
+              type="password"
+              name="password"
+              placeholder="password"
               value={signUp.password}
               onChange={handleInput}
               required
               />
-            {/* <Input
-              type="text"
-              name="textfield"
-              placeholder="Confirm Password"
-              /> */}
-          <Button 
-          onClick={e => {
-            e.target.style.background = '#FEBDC0';
-          }}
-          onMouseOver={e => {
-            e.target.style.cursor ="pointer";
-          }}
-          className="CreateAcc">Create Account</Button>
+          <Button className="CreateAcc">Create Account</Button>
       </Form>
       <Span>Already have an ___ account? <Link to="/login"><Login>Log in</Login></Link> </Span>
         </SecondWrap>

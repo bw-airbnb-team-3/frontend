@@ -52,19 +52,9 @@ padding-right: 10px;
 `;
 
 
-export default Dashboard => {
-  const [,] = useState([]);
+ const Dashboard = (props) => {
 
-  useEffect(() => {
-    axios
-      .get("")
-      .then(response => {
-        console.log(response);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  }, []);
+
 
   return (
     <Content className="content">
@@ -167,3 +157,5 @@ export default Dashboard => {
     </Content>
   );
 };
+
+export default Dashboard;

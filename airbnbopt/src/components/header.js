@@ -17,6 +17,10 @@ const Logo = styled.div`
   font-family: "Bungee Inline", cursive;
 `;
 
+const Title = styled.h1`
+  font-size: 70px;
+`;
+
 const Nav = styled.nav`
   display: flex;
 `;
@@ -33,13 +37,19 @@ export default Header => {
   return (
     <Wrapper className="nav-container">
       <Logo>
-        <h2>Los Angeles</h2>
+        <Title>LA Opt</Title>
       </Logo>
       <Nav className="nav-bar">
-        <NavLinks href="#">Home</NavLinks>
-        <NavLinks href="#">About</NavLinks>
-        <NavLinks href="#">Login</NavLinks>
-        <NavLinks href="#">Signup</NavLinks>
+        <NavLinks href="https://dreamy-goldberg-0edc2e.netlify.com/">
+          Home
+        </NavLinks>
+        <NavLinks href="https://about-page.netlify.com/">About</NavLinks>
+        <Link to="/login">
+          <NavLinks href="#">Login</NavLinks>
+        </Link>
+        <Link to="/signup">
+          <NavLinks href="#">Signup</NavLinks>
+        </Link>
       </Nav>
     </Wrapper>
   );
