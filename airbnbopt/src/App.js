@@ -2,25 +2,26 @@ import React from 'react';
 import './App.css';
 import Dashboard from './components/dashboard';
 import Signup from './components/signup';
+import Login from './components/login';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import protectedRoute from './components/protectedRoute';
+import ProtectedRoute from './components/ProtectedRoute';
 import Header from './components/header';
 
 function App() {
-  return (/*
+  return (
     <Router>
       <div className="App">
+      <Header/>
         <Switch>
-          <protectedRoute exact path = "/protected" component={Dashboard}/>
+          <ProtectedRoute exact path = "/protected" component={Dashboard}/>
           <Route path="/signup" component={Signup} />
+          <Route path="/login" component={Login} />
           <Route component={Signup} />
+          <Route component={Login} />
         </Switch>
       </div>
-    </Router>*/
-    <div className="App">
-      <Header/>
-      <Dashboard/>
-    </div>
+    </Router>
+
   );
 }
 
