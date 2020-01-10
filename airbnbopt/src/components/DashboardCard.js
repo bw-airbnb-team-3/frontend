@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import { getListings } from '../components/actions/actionsIndex';
+import { connect } from 'react-redux';
 import styled from "styled-components";
 import image1 from "../images/Airbnb1.jpg";
 import image2 from "../images/Airbnb2.jpg";
@@ -16,23 +17,39 @@ margin-left:100px;
 `;
 
 const Title = styled.h2`
-margin-top: 50px;
+margin-top: 40px;
+font-weight: 900;
+font-size: 27px
 `;
 
 
 const Container = styled.div`
 width: 450px;
 height: 350px;
-padding-top: 100px;
+padding-top: 50px;
 `;
 
 const Info = styled.div`
 `;
 
+const Subtitle = styled.h5`
+font-weight: 900;
+font-size: 17px;
+
+`;
+
 
 
 const DashboardCard = props => {
-  const [data, setData] = useState([
+
+  console.log(props)
+
+  useEffect(() => {
+    props.getListings();
+  }, [])
+
+  
+  /*const [data, setData] = useState([
     {
       id: 1,
       title: "LA Pool, Privacy and Amazing Views!",
@@ -93,33 +110,24 @@ const DashboardCard = props => {
       baths: "1",
       image: image5
     }
-  ]);
+  ]);*/
+
+  console.log(props.state);
 
   return (
     <div>
       <Title>Popular Homes this Week</Title>
     <WrappedDiv>
-      {data.map(({ title, price, guests, rooms, beds, baths, image }) => (
+      {props.state.map(({ listing }) => (
         <Container>
-          <h5>{title}</h5>
+          <Subtitle>test</Subtitle>
           <Info>
               <img
-                src={image}
+                src="#"
                 className="feedImage"
                 alt="photo by: https://www.airbnb.com/users/show/30303945"
               />
-            {" "}
-            <br />
-            {price}
-            <br />
-            {guests} guests
-            <br />
-            {rooms} bedroom
-            <br />
-            {beds} beds
-            <br />
-            {baths} baths
-            <br />
+
           </Info>
         </Container>
       ))}
@@ -127,4 +135,10 @@ const DashboardCard = props => {
   );
 };
 
-export default DashboardCard;
+const mapStateToProps = (state) => {
+  return{
+     state
+  }
+};
+
+export default connect(mapStateToProps, {getListings})(DashboardCard);
