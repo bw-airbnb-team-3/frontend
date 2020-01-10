@@ -5,6 +5,8 @@ import styled from "styled-components";
 import Footer from "./Footer";
 
 
+
+
 const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
@@ -30,7 +32,7 @@ align-items: center;
 margin: 30px;
 &:hover .CreateAcc {
     background-color: #f6f6f6;
-    color: #56baed;
+    color: #FD5C63;
 }
 
 `;
@@ -50,7 +52,7 @@ border-radius: 5px;
 `;
 
 const Button = styled.button`
-background-color: #56baed;
+background-color: #FD5C63;
 border: none;
 color: white;
 padding: 5px 60px;
@@ -164,7 +166,6 @@ const Signup = (props) => {
       );
   };
 
-
     return (
     <Wrapper>
         <SecondWrap>
@@ -176,6 +177,7 @@ const Signup = (props) => {
               placeholder="username"
               value={signUp.username}
               onChange={handleInput}
+              required
             />
             <Input
               type="password"
@@ -183,6 +185,7 @@ const Signup = (props) => {
               placeholder="password"
               value={signUp.password}
               onChange={handleInput}
+              required
               />
           <Button className="CreateAcc">Create Account</Button>
       </Form>

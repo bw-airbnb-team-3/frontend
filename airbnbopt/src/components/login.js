@@ -24,7 +24,7 @@ const SecondWrap = styled.div`
   background: #fff;
   width: 50%;
   max-width: 500px;
-  postion: relative;
+  position: relative;
   padding: 0px;
   -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
