@@ -94,7 +94,6 @@ const Login = props => {
     setLogin({
       ...login,
       [e.target.name]: e.target.value
-<<<<<<< HEAD
     });
     console.log(login);
   };
@@ -112,30 +111,6 @@ const Login = props => {
   };
 
   return (
-=======
-  });
-  console.log(login)
-};
-
-const handelLogin = e => {
-  e.preventDefault();
-  axios
-    .post("https://airbnb-bw.herokuapp.com/api/login", login)
-    .then(res => {
-      console.log(res);
-      console.log(res.data.token);
-      localStorage.setItem("token", res.data.token);
-      props.history.push("/protected");
-    })
-    .catch(err =>
-      console.log(
-        err.message
-      )
-    );
-};
-
-    return (
->>>>>>> a36f83b50031cb568b1849ebce881b63417cee9c
     <Wrapper>
       <SecondWrap>
         <h1>Login</h1>
