@@ -36,10 +36,8 @@ export default Header => {
         <h2>Los Angeles</h2>
       </Logo>
       <Nav className="nav-bar">
-        <NavLinks href="#">Home</NavLinks>
-        <NavLinks href="#">About</NavLinks>
-        <NavLinks href="#">Login</NavLinks>
-        <NavLinks href="#">Signup</NavLinks>
+        <NavLinks href="/protected">Home</NavLinks>
+        <NavLinks href="#">Log Out</NavLinks>
       </Nav>
     </Wrapper>
   );

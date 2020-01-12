@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 import DashboardCard from "./DashboardCard";
 
@@ -44,15 +44,15 @@ const Label = styled.label`
 padding-right: 5px;
 `;
 
+const username = localStorage.getItem("username");
 
- const Dashboard = (props) => {
 
-
+ const Dashboard = () => {
 
   return (
     <Content className="content">
       <ContentFeed>
-        <h1>Hello, *users name here*</h1>
+        <h1>Hello, {username}</h1>
       </ContentFeed>
 
       <Filter>
@@ -146,6 +146,7 @@ padding-right: 5px;
           </Features>
           <br />
         </Form>
+        <Link to="/addProp">Add a Listing?</Link>
       </Filter>
     </Content>
   );

@@ -115,6 +115,7 @@ const handelLogin = e => {
       console.log(res);
       console.log(res.data.token);
       localStorage.setItem("token", res.data.token);
+      localStorage.setItem("username", login.username);
       props.history.push("/protected");
     })
     .catch(err =>

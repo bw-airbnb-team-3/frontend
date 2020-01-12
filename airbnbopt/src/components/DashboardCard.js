@@ -27,6 +27,8 @@ const Container = styled.div`
 width: 450px;
 height: 350px;
 padding-top: 50px;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+margin: 2.5%;
 `;
 
 const Info = styled.div`
@@ -34,7 +36,7 @@ const Info = styled.div`
 
 const Subtitle = styled.h5`
 font-weight: 900;
-font-size: 17px;
+font-size: 24px;
 
 `;
 
@@ -49,68 +51,6 @@ const DashboardCard = props => {
   }, [])
 
   
-  /*const [data, setData] = useState([
-    {
-      id: 1,
-      title: "LA Pool, Privacy and Amazing Views!",
-      price: "$150 / night",
-      guests: "3",
-      rooms: "1",
-      beds: "1",
-      baths: "1.5",
-      image: image1
-    },
-    {
-      id: 2,
-      title: "Burbank near Studios - quiet, safe neighborhood",
-      price: "$64 / night",
-      guests: "2",
-      rooms: "1",
-      beds: "1",
-      baths: "1.5",
-      image: image2
-    },
-    {
-      id: 3,
-      title: "Charming Guests Suite in Hancock Park, 2BD,Pool",
-      price: "$80 / night",
-      guests: "4",
-      rooms: "2",
-      beds: "3",
-      baths: "1",
-      image: image3
-    },
-    {
-      id: 4,
-      title: "Stylish Hollywood Loft with Views",
-      price: "$100 / night",
-      guests: "3",
-      rooms: "1",
-      beds: "1",
-      baths: "1",
-      image: image4
-    },
-    {
-      id: 5,
-      title: "Downtown LA Luxury Apartment w/ BEST LOCATION DTLA",
-      price: "$89 / night",
-      guests: "3",
-      rooms: "1",
-      beds: "2",
-      baths: "1",
-      image: image5
-    },
-    {
-      id: 6,
-      title: "Downtown LA Luxury Apartment w/ BEST LOCATION DTLA",
-      price: "$89 / night",
-      guests: "3",
-      rooms: "1",
-      beds: "2",
-      baths: "1",
-      image: image5
-    }
-  ]);*/
 
   console.log(props.state);
 
@@ -118,9 +58,18 @@ const DashboardCard = props => {
     <div>
       <Title>Popular Homes this Week</Title>
     <WrappedDiv>
-      {props.state.map(({ listing }) => (
+      {props.state.map(( listing ) => (
         <Container>
-          <Subtitle>test</Subtitle>
+          <Subtitle> {listing.amenities}  </Subtitle>
+          <ul>
+            <li>
+             <h3>Bedrooms: {listing.bedrooms}</h3>
+            </li>
+            <li>
+             <h3>Bathrooms: {listing.bathrooms}</h3>
+            </li>
+
+          </ul>
           <Info>
               <img
                 src="#"
@@ -133,10 +82,11 @@ const DashboardCard = props => {
       ))}
     </WrappedDiv></div>
   );
+  
 };
 
 const mapStateToProps = (state) => {
-  return{
+  return {
      state
   }
 };
