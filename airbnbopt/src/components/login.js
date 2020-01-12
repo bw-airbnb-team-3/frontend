@@ -75,25 +75,6 @@ font-weight: 900;
 
 
 
-
-const handelLogin = e => {
-  e.preventDefault();
-  axios
-    .post("https://airbnb-bw.herokuapp.com/api/login", login)
-    .then(res => {
-      console.log(res);
-      console.log(res.data.token);
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("username", login.username);
-      props.history.push("/protected");
-    })
-    .catch(err =>
-      console.log(
-        err.message
-      )
-    );
-};
-
 const Login = props => {
   const [login, setLogin] = useState({
     username: "",
@@ -111,15 +92,20 @@ const Login = props => {
   const handelLogin = e => {
     e.preventDefault();
     axios
-      .post("https://airbnb-bw.herokuapp.com/api/auth/login", login)
+      .post("https://airbnb-bw.herokuapp.com/api/login", login)
       .then(res => {
         console.log(res);
-        localStorage.setItem("token", res.data.payload);
+        console.log(res.data.token);
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("username", login.username);
         props.history.push("/protected");
       })
-      .catch(err => console.log(err.message));
+      .catch(err =>
+        console.log(
+          err.message
+        )
+      );
   };
-
   return (
     <Wrapper>
       <SecondWrap>
