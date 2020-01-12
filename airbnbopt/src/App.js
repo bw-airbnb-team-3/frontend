@@ -7,6 +7,7 @@ import addProp from './components/addprop';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import ProtectedRoute from './components/ProtectedRoute';
 import Header from './components/header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route component={Login} />
           <Route component={addProp} />
         </Switch>
+        <Footer/>
       </div>
     </Router>
 

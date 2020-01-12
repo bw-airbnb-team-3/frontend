@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import { Route, Redirect, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import styled from "styled-components";
 import Footer from "./Footer";
+
+
 
 
 const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 10% 0%;
+padding: 15% 0%;
 `;
 
 const SecondWrap = styled.div`
@@ -20,7 +22,6 @@ max-width: 500px;
 box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 text-align: center;
 align-items: center;
-
 `;
 
 const Form = styled.form`
@@ -28,11 +29,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin: 30px;
-&:hover .CreateAcc {
-    background-color: #f6f6f6;
-    color: #56baed;
-}
-
 `;
 
 const Input = styled.input`
@@ -50,7 +46,7 @@ border-radius: 5px;
 `;
 
 const Button = styled.button`
-background-color: #56baed;
+background-color: #fd5c63;
 border: none;
 color: white;
 padding: 5px 60px;
@@ -58,8 +54,8 @@ text-align: center;
 text-decoration: none;
 text-transform: uppercase;
 font-size: 13px;
-font-weight: 900;
-width: 250px;
+width: 100%;
+max-width:250px;
 height: 55px;
 border-radius: 5px;
 margin-top: 10px;
@@ -67,15 +63,14 @@ margin-top: 10px;
 
 const Login = styled.div`
 color:gray;
-text-decoration: none
+text-decoration: none;
 display:inline-block;
 margin: 35px 0px;
 `;
 
 const Span = styled.span`
-color:#92badd;
+color:#FEBDC0;
 font-weight: 900;
-
 `;
 
 
@@ -164,7 +159,6 @@ const Signup = (props) => {
       );
   };
 
-
     return (
     <Wrapper>
         <SecondWrap>
@@ -176,6 +170,7 @@ const Signup = (props) => {
               placeholder="username"
               value={signUp.username}
               onChange={handleInput}
+              required
             />
             <Input
               type="password"
@@ -183,14 +178,13 @@ const Signup = (props) => {
               placeholder="password"
               value={signUp.password}
               onChange={handleInput}
+              required
               />
-          <Button className="CreateAcc">Create Account</Button>
+          <Button onClick={e => {e.target.style.background = "#FEBDC0";}}
+          onMouseOver={e => {e.target.style.cursor = "pointer";}}>Create Account</Button>
       </Form>
-      <Span>Already have an ___ account? <Link to="/login"><Login>Log in</Login></Link> </Span>
+      <Span>Already have an LaOpt account? <Link to="/login"><Login>Log In</Login></Link> </Span>
         </SecondWrap>
-        <footer>
-        <Footer/>
-        </footer>
     </Wrapper>
     )
 }
