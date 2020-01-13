@@ -1,51 +1,25 @@
 import React, { useState } from "react";
+import { Link }from "react-router-dom";
 import axios from "axios";
 import styled from "styled-components";
-import * as Yup from "yup";
+
+
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  min-height: 100%;
-  padding: 20px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 15% 0%;
 `;
 
 const SecondWrap = styled.div`
-  -webkit-border-radius: 10px 10px 10px 10px;
-  border-radius: 10px 10px 10px 10px;
-  background: #fff;
-  width: 50%;
-  max-width: 500px;
-  position: relative;
-  padding: 0px;
-  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
-  text-align: center;
-  align-items: center;
-`;
-
-const ForgotPW = styled.a`
-  color: #92badd;
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 900;
-`;
-
-const ForgotDiv = styled.div`
-  background-color: #f6f6f6;
-  border-top: 1px solid #dce8f1;
-  padding: 25px;
-  text-align: center;
-  -webkit-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 10px 10px;
+border-radius: 10px 10px 10px 10px;
+background: #fff;
+width: 50%;
+max-width: 500px;
+box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+text-align: center;
+align-items: center;
 `;
 
 const Form = styled.form`
@@ -73,16 +47,33 @@ const Button = styled.button`
   background-color: #fd5c63;
   border: none;
   color: white;
-  padding: 15px 80px;
+  padding: 5px 60px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 13px;
-  width: 250px;
+  width: 100%;
+  max-width:250px;
   height: 55px;
   border-radius: 5px;
   margin-top: 10px;
 `;
+
+const SignUp = styled.div`
+color:gray;
+text-decoration: none;
+display:inline-block;
+margin: 35px 0px;
+`;
+
+const Span = styled.span`
+color:#FEBDC0;
+font-weight: 900;
+`;
+
+
+
+
 
 const Login = props => {
   const [login, setLogin] = useState({
@@ -101,15 +92,20 @@ const Login = props => {
   const handelLogin = e => {
     e.preventDefault();
     axios
-      .post("https://airbnb-bw.herokuapp.com/api/auth/login", login)
+      .post("https://airbnb-bw.herokuapp.com/api/login", login)
       .then(res => {
         console.log(res);
-        localStorage.setItem("token", res.data.payload);
+        console.log(res.data.token);
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("username", login.username);
         props.history.push("/protected");
       })
-      .catch(err => console.log(err.message));
+      .catch(err =>
+        console.log(
+          err.message
+        )
+      );
   };
-
   return (
     <Wrapper>
       <SecondWrap>
@@ -142,9 +138,7 @@ const Login = props => {
             Log in
           </Button>
         </Form>
-        <ForgotDiv>
-          <ForgotPW> Forgot Password?</ForgotPW>
-        </ForgotDiv>
+        <Span>Don't have an LaOpt account? <Link to="/signup"><SignUp>Sign Up</SignUp></Link> </Span>
       </SecondWrap>
     </Wrapper>
   );

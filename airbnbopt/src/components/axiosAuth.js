@@ -8,7 +8,7 @@ const axiosAuth = () => {
     baseURL: 'https://airbnb-bw.herokuapp.com/api/auth',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': token
+      'token': token
     }
   });
 };

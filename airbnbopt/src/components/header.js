@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -15,10 +14,16 @@ const Logo = styled.div`
   padding: 0px 0px 0px 50px;
   color: gray;
   font-family: "Bungee Inline", cursive;
+  @media (max-width: 720px) {
+    padding: 0px 0px 0px 20px;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: 70px;
+  font-size: 60px;
+  @media (max-width: 720px) {
+    font-size: 50px;
+  }
 `;
 
 const Nav = styled.nav`
@@ -31,6 +36,9 @@ const NavLinks = styled.a`
   padding: 0px 50px 0px 0px;
   font-weight: 500;
   font-family: "Bungee Inline", cursive;
+  @media (max-width: 720px) {
+    padding: 0px 10px 0px 0px;
+  }
 `;
 
 export default Header => {
@@ -40,16 +48,10 @@ export default Header => {
         <Title>LA Opt</Title>
       </Logo>
       <Nav className="nav-bar">
-        <NavLinks href="https://dreamy-goldberg-0edc2e.netlify.com/">
-          Home
-        </NavLinks>
-        <NavLinks href="https://about-page.netlify.com/">About</NavLinks>
-        <Link to="/login">
-          <NavLinks href="#">Login</NavLinks>
-        </Link>
-        <Link to="/signup">
-          <NavLinks href="#">Signup</NavLinks>
-        </Link>
+        <NavLinks href="https://la-opt.netlify.com/">Home</NavLinks>
+        <NavLinks href="https://la-opt.netlify.com/about.html">About</NavLinks>
+        <NavLinks href="/protected">Dashboard</NavLinks>
+        <NavLinks href="#">Log Out</NavLinks>
       </Nav>
     </Wrapper>
   );
