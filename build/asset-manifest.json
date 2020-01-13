@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.142c9d49.chunk.css",
+    "main.js": "/static/js/main.c45091f1.chunk.js",
+    "main.js.map": "/static/js/main.c45091f1.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2d37078e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2d37078e.js.map",
+    "static/js/2.c02e8a8e.chunk.js": "/static/js/2.c02e8a8e.chunk.js",
+    "static/js/2.c02e8a8e.chunk.js.map": "/static/js/2.c02e8a8e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c3be7e00ab9446f8983c4f2d74df43db.js": "/precache-manifest.c3be7e00ab9446f8983c4f2d74df43db.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.142c9d49.chunk.css.map": "/static/css/main.142c9d49.chunk.css.map",
+    "static/js/2.c02e8a8e.chunk.js.LICENSE": "/static/js/2.c02e8a8e.chunk.js.LICENSE",
+    "static/media/Airbnb1.jpg": "/static/media/Airbnb1.3054dc56.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d37078e.js",
+    "static/js/2.c02e8a8e.chunk.js",
+    "static/css/main.142c9d49.chunk.css",
+    "static/js/main.c45091f1.chunk.js"
+  ]
+}
