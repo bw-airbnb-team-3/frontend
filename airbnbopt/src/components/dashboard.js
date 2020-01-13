@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import DashboardCard from "./DashboardCard";
-import StarWars from "./DashboardCard";
 
 const Content = styled.div``;
 

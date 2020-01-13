@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { getListings } from "../components/actions/actionsIndex";
 import { connect } from "react-redux";
 import styled from "styled-components";

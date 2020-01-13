@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -42,10 +41,6 @@ const NavLinks = styled.a`
   }
 `;
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-`;
-
 export default Header => {
   return (
     <Wrapper className="nav-container">
@@ -53,7 +48,9 @@ export default Header => {
         <Title>LA Opt</Title>
       </Logo>
       <Nav className="nav-bar">
-        <NavLinks href="/protected">Home</NavLinks>
+        <NavLinks href="https://la-opt.netlify.com/">Home</NavLinks>
+        <NavLinks href="https://la-opt.netlify.com/about.html">About</NavLinks>
+        <NavLinks href="/protected">Dashboard</NavLinks>
         <NavLinks href="#">Log Out</NavLinks>
       </Nav>
     </Wrapper>
