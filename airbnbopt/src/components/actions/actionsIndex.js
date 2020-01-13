@@ -24,3 +24,23 @@ export const getListings = () => dispatch => {
         });
       });
   };
+
+  export const addListing = (listing) => dispatch => {
+    console.log(listing)
+    axiosAuth()
+      .post('/listings', listing)
+      .then(res => {
+        console.log(res.data);
+        dispatch({
+          type: LISTING_ADD_SUCCESS,
+          payload: listing
+        });
+      })
+      .catch(err => {
+        console.log(err)
+        dispatch({
+          type: LISTING_ADD_FAILURE,
+          payload: 'error adding data'
+        })
+      });
+  };

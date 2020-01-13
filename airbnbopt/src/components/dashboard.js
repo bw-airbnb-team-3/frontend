@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import DashboardCard from "./DashboardCard";
 import StarWars from "./DashboardCard";
@@ -47,11 +47,13 @@ const Label = styled.label`
   padding-right: 10px;
 `;
 
-const Dashboard = props => {
+const username = localStorage.getItem("username");
+
+const Dashboard = () => {
   return (
     <Content className="content">
       <ContentFeed>
-        <h1>Hello, *users name here*</h1>
+        <h1>Hello, {username}</h1>
       </ContentFeed>
 
       <Filter>
@@ -123,11 +125,7 @@ const Dashboard = props => {
             <input type="checkbox" id="gym" />
           </Features>
           <br />
-          <Features>
-            <Label>Free Parking</Label>
-            <input type="checkbox" id="parking" />
-          </Features>
-          <br />
+          <Link to="/addProp">Add a Listing?</Link>
         </Form>
       </Filter>
     </Content>
