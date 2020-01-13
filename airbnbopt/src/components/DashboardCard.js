@@ -3,10 +3,8 @@ import { getListings } from "../components/actions/actionsIndex";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import image1 from "../images/Airbnb1.jpg";
-import image2 from "../images/Airbnb2.jpg";
-import image3 from "../images/Airbnb3.jpg";
-import image4 from "../images/Airbnb4.jpg";
-import image5 from "../images/Airbnb5.jpg";
+
+
 
 const WrappedDiv = styled.div`
   display: flex;
@@ -23,17 +21,9 @@ const Title = styled.h2`
 `;
 
 const Container = styled.div`
-<<<<<<< HEAD
-width: 450px;
-height: 350px;
-padding-top: 50px;
-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-margin: 2.5%;
-=======
   width: 450px;
   height: 350px;
   padding-top: 50px;
->>>>>>> a9f3be59aa21daa1069265268483321dba77cefb
 `;
 
 const Info = styled.div`
@@ -41,14 +31,8 @@ const Info = styled.div`
 `;
 
 const Subtitle = styled.h5`
-<<<<<<< HEAD
-font-weight: 900;
-font-size: 24px;
-
-=======
   font-weight: 900;
   font-size: 17px;
->>>>>>> a9f3be59aa21daa1069265268483321dba77cefb
 `;
 
 const DashboardCard = props => {
@@ -80,9 +64,9 @@ const DashboardCard = props => {
           </ul>
           <Info>
               <img
-                src="#"
+                src={image1}
                 className="feedImage"
-                alt="photo by: https://www.airbnb.com/users/show/30303945"
+                alt="photo "
               />
             </Info>
           </Container>

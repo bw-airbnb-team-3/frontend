@@ -51,7 +51,11 @@ const Label = styled.label`
 padding-right: 10px;
 `;
 
+
+
 const username = localStorage.getItem("username");
+
+
 
 
  const Dashboard = () => {
@@ -147,13 +151,8 @@ const username = localStorage.getItem("username");
           <input type="checkbox" id="apartment" />
           </Features>
           <br />
-          <Features>
-          <Label>Bed and Breakfast</Label>
-          <input type="checkbox" id="bnb" />
-          </Features>
-          <br />
+        <Link to="/addProp">Add a Listing?</Link>      
         </Form>
-        <Link to="/addProp">Add a Listing?</Link>
       </Filter>
     </Content>
   );
