@@ -43,7 +43,7 @@ export default Header => {
         <NavLinks href="https://dreamy-goldberg-0edc2e.netlify.com/">
           Home
         </NavLinks>
-        <NavLinks href="https://about-page.netlify.com/">About</NavLinks>
+        <NavLinks href="https://la-opt.netlify.com/about.html">About</NavLinks>
         <Link to="/login">
           <NavLinks href="#">Login</NavLinks>
         </Link>

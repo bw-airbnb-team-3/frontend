@@ -1,50 +1,59 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { getListings } from "../components/actions/actionsIndex";
 import { connect } from "react-redux";
 import styled from "styled-components";
+import { Container, Row } from "reactstrap";
 import image1 from "../images/Airbnb1.jpg";
 import image2 from "../images/Airbnb2.jpg";
 import image3 from "../images/Airbnb3.jpg";
 import image4 from "../images/Airbnb4.jpg";
 import image5 from "../images/Airbnb5.jpg";
+import SwCard from "./swCard";
 
-const WrappedDiv = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 200px;
-  text-align: center;
+const Background = styled.div`
+  background-color: gray;
+  border: solid 3px black;
 `;
 
-const Title = styled.h2`
-  margin-top: 40px;
-  font-weight: 900;
-  font-size: 27px;
-  text-align: center;
-`;
+export default function StarWars() {
+  const [characters, setCharacters] = useState([]);
 
-const Container = styled.div`
-  width: 450px;
-  height: 350px;
-  padding-top: 50px;
-`;
+  useEffect(() => {
+    axios
+      .get("https://swapi.co/api/people/")
+      .then(response => {
+        console.log(response.data.results);
+        setCharacters(response.data.results);
+      })
+      .catch(error => {
+        console.log("the data was not returned", error);
+      });
+  }, []);
 
-const Info = styled.div`
-  text-align: center;
-`;
+  return (
+    <Container>
+      <Row>
+        {characters.map(item => {
+          //  console.log(item.name)
 
-const Subtitle = styled.h5`
-  font-weight: 900;
-  font-size: 17px;
-`;
-
-const DashboardCard = props => {
-  console.log(props);
+          console.log(item.mass);
+          return (
+           
+          );
+        })}
+      </Row>
+    </Container>
+  );
+}
+/* const DashboardCard = props => {
+  console.log(props); 
 
   useEffect(() => {
     props.getListings();
-  }, []);
+  }, []); */
 
-  /*const [data, setData] = useState([
+/*const [data, setData] = useState([
     {
       id: 1,
       title: "LA Pool, Privacy and Amazing Views!",
@@ -107,7 +116,7 @@ const DashboardCard = props => {
     }
   ]);*/
 
-  console.log(props.state);
+/* console.log(props.state);
 
   return (
     <div>
@@ -136,4 +145,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { getListings })(DashboardCard);
+export default connect(mapStateToProps, { getListings })(DashboardCard); */
