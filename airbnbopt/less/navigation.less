@@ -1,0 +1,49 @@
+.mainheader {  
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around;
+    flex-basis: 95%;  
+    margin-bottom: 5%;
+    background: linear-gradient(to right, #414345, #232526);
+}
+  
+.mainheader .mainheader1 h1 {
+    color: grey;
+    font-size: 6rem;
+    padding-top: 8px;
+    font-family: 'Bungee Inline', cursive;
+    
+}
+  
+.mainheader .navigation-bar {
+    display: flex;
+    align-items: center;
+}
+  
+.mainheader .navigation-bar .nav1 {
+    margin-top: 5%;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: gray;
+    font-family: 'Bungee Inline', cursive;
+}
+  
+.mainheader .navigation-bar .nav1:hover {
+    color: #62dafc;
+    text-decoration: underline ;
+}
+
+@media @mobile {
+    .mainheader {
+        flex-direction: column;
+    }
+    .mainheader .mainheader1 h1 {
+        text-align: center;
+    }
+   
+    .mainheader .navigation-bar {
+        justify-content: space-evenly;
+    }
+
+}

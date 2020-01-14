@@ -1,0 +1,295 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+html {
+  font-size: 62.5%;
+  margin: 0 auto;
+  padding: 20px;
+}
+* .middlesection .middleheader h2 {
+  font-size: 2.6rem;
+  color: black;
+  font-family: 'Bungee Inline', cursive;
+}
+*.middlesection .middleheader p {
+  margin-top: 5%;
+  font-size: 1.5rem;
+}
+.mainheader {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-around;
+  flex-basis: 95%;
+  margin-bottom: 5%;
+  background: linear-gradient(to right, #414345, #232526);
+}
+.mainheader .mainheader1 h1 {
+  color: grey;
+  font-size: 6rem;
+  padding-top: 8px;
+  font-family: 'Bungee Inline', cursive;
+}
+.mainheader .navigation-bar {
+  display: flex;
+  align-items: center;
+}
+.mainheader .navigation-bar .nav1 {
+  margin-top: 5%;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: gray;
+  font-family: 'Bungee Inline', cursive;
+}
+.mainheader .navigation-bar .nav1:hover {
+  color: #62dafc;
+  text-decoration: underline ;
+}
+@media (max-width: 730px) and (min-width: 500px) {
+  .mainheader {
+    flex-direction: column;
+  }
+  .mainheader .mainheader1 h1 {
+    text-align: center;
+  }
+  .mainheader .navigation-bar {
+    justify-content: space-evenly;
+  }
+}
+.footer {
+  text-align: center;
+  font-size: 1.2rem;
+  color: grey;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #414345, #232526);
+  padding: 20px;
+  width: 100%;
+}
+.image {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+.image .image1 {
+  flex-basis: 95%;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px 3px #c79e9e;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  font-family: 'Bungee Inline', cursive;
+}
+.button .button1 {
+  text-align: center;
+  background-color: #62dafc;
+  flex-basis: 30%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  color: #251f1f;
+  font-size: 2.7rem;
+  font-weight: bold;
+  box-shadow: 5px 5px #979696;
+  cursor: pointer;
+}
+.button .button1:active {
+  box-shadow: 7px 7px;
+  transform: translateY(6px);
+}
+.button .button1:hover {
+  color: azure;
+}
+.middlesection {
+  display: flex;
+  justify-content: space-evenly;
+}
+.middlesection .middleheader .image2 {
+  border-radius: 15px;
+  margin-bottom: 10%;
+  box-shadow: 5px 5px #cfcdcd;
+}
+.middlesection .middleheader .image3 {
+  border-radius: 15px;
+  margin-bottom: 10%;
+  box-shadow: 5px 5px #d6d5d5;
+}
+.middleheader {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 4%;
+  flex-basis: 35%;
+}
+.middlesection .middleheader p span {
+  font-size: larger;
+  font-weight: bolder ;
+  color: #f80a0a;
+  font-family: 'Bungee Inline', cursive;
+}
+@media (max-width: 850px) and (min-width: 735px) {
+  .image .image1 {
+    flex-basis: 75%;
+    padding: 1%;
+    margin: 1%;
+  }
+  .middlesection {
+    flex-direction: column;
+  }
+  .middlesection .middleheader .image2 {
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 5%;
+  }
+  .middlesection .middleheader .image3 {
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 5%;
+  }
+  *.middlesection .middleheader h2 p {
+    line-height: 2;
+  }
+  .button .button1 {
+    flex-basis: 70%;
+  }
+}
+@media (max-width: 730px) and (min-width: 500px) {
+  .image .image1 {
+    width: 90% ;
+  }
+  .middlesection {
+    flex-direction: column;
+  }
+  .button .button1 {
+    flex-basis: 65%;
+  }
+}
